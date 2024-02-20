@@ -15,8 +15,8 @@ public class TeamRepository : ITeamRepository
         var teams = _context.Teams
              .Select(t => new TeamDTOResponse
              {
-                 Id = t.Id,
-                 Name = t.Name
+                 TeamId = t.TeamId,
+                 TeamName = t.TeamName
              })
              .ToList();
         return teams;
